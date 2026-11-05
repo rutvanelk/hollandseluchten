@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luchtvraag · Hollandse Luchten (prototype)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top-inner">
+        <div class="brand">Luchtvraag <span>Hollandse Luchten</span></div>
+        <div class="top-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="nl" class="on">NL</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+          <div class="mock-badge" id="badge">Prototype · nepdata</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="intro">
+        <h1 id="title">Stel je vraag over de luchtkwaliteit</h1>
+        <p id="lead">
+          Ik zet je vraag om in een analyse met de functies van Samen Analyseren, laat zien welke keuzes ik maak, en leg uit
+          wat je wel en niet uit de uitkomst kunt concluderen.
+        </p>
+        <form id="ask" class="ask">
+          <input id="q" type="text" autocomplete="off" placeholder="Bijvoorbeeld: is de lucht in het weekend beter dan doordeweeks?" />
+          <button type="submit" id="submit">Analyseer</button>
+        </form>
+        <p id="try" class="muted small">Probeer een voorbeeld:</p>
+        <div id="examples" class="chips"></div>
+      </section>
+
+      <div id="result"></div>
+    </main>
+
+    <footer id="foot" class="wrap muted small">
+      Alle cijfers zijn nepdata voor 6 fictieve sensoren in Haarlem en één fictief referentiestation (<span id="data-range"></span>).
+      Niet gebruiken voor conclusies over echte luchtkwaliteit.
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/mock-data.js"></script>
+    <script src="js/analysis.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/planner.js"></script>
+    <script src="js/intents.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
